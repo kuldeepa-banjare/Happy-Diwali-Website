@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Diwali ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030303;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+    radial-gradient(circle at 15% 20%, #ffd70012, transparent 30%),
+    radial-gradient(circle at 85% 30%, #ff990012, transparent 30%),
+    radial-gradient(circle at 50% 90%, #ffd70010, transparent 35%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* ===== SPARKLES ===== */
+
+.sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+    animation: sparkle 3s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes sparkle {
+    0%,100% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #ffffff15;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    background: linear-gradient(90deg,#ffd700,#fff0a0,#ffd700);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav span {
+    color: #ffd700;
+    font-size: 14px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.badge {
+    padding: 10px 25px;
+    border: 1px solid #ffd700;
+    border-radius: 30px;
+    color: #ffd700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px #ffd70050;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 9vw, 100px);
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(
+        90deg,
+        #ffd700,
+        #fff0a0,
+        #e5a800,
+        #ffffff,
+        #ffd700
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s linear infinite;
+    filter: drop-shadow(0 0 20px #ffd70055);
+}
+
+@keyframes rainbow {
+    to {
+        background-position: 300%;
+    }
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: clamp(30px, 5vw, 55px);
+    margin-top: 15px;
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ff9900;
+}
+
+.hero p {
+    color: #c9c9c9;
+    max-width: 650px;
+    margin: 25px auto;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    background: linear-gradient(90deg,#ffd700,#fff0a0,#e5a800);
+    box-shadow: 0 0 15px #ffd70070, 0 0 35px #ff990040;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 25px #ffd700, 0 0 50px #ff9900;
+}
+
+/* ===== DIYAS ===== */
+
+.diyas {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 35px 0;
+    font-size: 42px;
+}
+
+.diya {
+    animation: float 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px #ff9900);
+}
+
+.diya:nth-child(2) { animation-delay: .4s; }
+.diya:nth-child(3) { animation-delay: .8s; }
+.diya:nth-child(4) { animation-delay: 1.2s; }
+.diya:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ===== SECTION ===== */
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+    background: linear-gradient(90deg,#ffd700,#fff0a0,#e5a800);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.section-subtitle {
+    color: #aaa;
+    margin-bottom: 45px;
+}
+
+/* ===== LUXURY GOLDEN CARDS ===== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 28px;
+    margin-top: 45px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    padding: 35px 28px;
+    text-align: left;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.015)
+    );
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,215,0,0.20);
+    border-radius: 24px;
+
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Golden Glow Background */
+
+.card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -100px;
+
+    border-radius: 50%;
+    background: #FFD700;
+
+    filter: blur(65px);
+    opacity: 0.10;
+
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    opacity: 0.75;
+    transform: scale(2);
+}
+
+/* Golden Hover */
+
+.card:hover {
+    transform: translateY(-15px) scale(1.03);
+
+    background: linear-gradient(
+        145deg,
+        #29200b,
+        #090909
+    );
+
+    border-color: #FFD700;
+
+    box-shadow:
+        0 15px 40px #00000080,
+        0 0 25px #FFD70070,
+        inset 0 0 20px #FFD70015;
+}
+
+/* Card Icon */
+
+.card .icon {
+    position: relative;
+    z-index: 1;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+
+    border-radius: 18px;
+    background: rgba(255,255,255,0.07);
+
+    margin-bottom: 28px;
+    transition: 0.5s;
+}
+
+.card:hover .icon {
+    transform: rotate(-10deg) scale(1.15);
+    background: #FFD700;
+
+    box-shadow: 0 0 25px #FFD70090;
+}
+
+/* Card Heading */
+
+.card h3 {
+    position: relative;
+    z-index: 1;
+
+    color: #fff;
+    font-size: 19px;
+
+    margin-bottom: 13px;
+    transition: 0.4s;
+}
+
+.card:hover h3 {
+    color: #FFD700;
+    text-shadow: 0 0 12px #FFD70070;
+}
+
+/* Card Description */
+
+.card p {
+    position: relative;
+    z-index: 1;
+
+    color: #999;
+    font-size: 13px;
+    line-height: 1.9;
+
+    transition: 0.4s;
+}
+
+.card:hover p {
+    color: #ffffff;
+}
+
+/* Decorative Line */
+
+.card .line {
+    width: 35px;
+    height: 3px;
+
+    margin-top: 22px;
+    border-radius: 10px;
+
+    background: #FFD700;
+
+    transition: 0.5s;
+}
+
+.card:hover .line {
+    width: 75px;
+    box-shadow: 0 0 15px #FFD700;
+}
+
+/* ===== WISHES SECTION ===== */
+
+.wishes {
+    background: linear-gradient(
+        135deg,
+        #171104,
+        #080808,
+        #171104
+    );
+
+    border: 1px solid #ffd70055;
+    border-radius: 25px;
+
+    padding: 55px 25px;
+
+    box-shadow: 0 0 30px #ffd70020;
+
+    max-width: 850px;
+    margin: auto;
+}
+
+.wishes h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(35px, 6vw, 55px);
+    color: #ffd700;
+
+    text-shadow: 0 0 15px #ffd700;
+
+    margin-bottom: 20px;
+}
+
+.wishes p {
+    color: #ddd;
+    line-height: 2;
+    font-size: 15px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid #ffffff15;
+    color: #888;
+    font-size: 13px;
+}
+
+footer span {
+    color: #ffd700;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:600px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    nav span {
+        font-size: 11px;
+    }
+
+    .diyas {
+        gap: 20px;
+        font-size: 32px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .cards {
+        gap: 18px;
+    }
+
+    .card {
+        min-height: 230px;
+        padding: 28px 22px;
+    }
+}
+
+/* Accessibility */
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">✨ FESTIVAL OF LIGHTS</div>
+    <span>🪔 DIWALI 2026</span>
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+    <div class="badge">
+        ✦ THE FESTIVAL OF LIGHTS ✦
+    </div>
+
+    <h1>HAPPY DIWALI</h1>
+
+    <h2>Let Your Dreams Shine ✨</h2>
+
+    <p>
+        May this beautiful festival fill your life with endless happiness,
+        prosperity, love and success. May every diya bring new hope
+        and every sparkle make your world brighter.
+    </p>
+
+    <div class="diyas">
+        <div class="diya">🪔</div>
+        <div class="diya">✨</div>
+        <div class="diya">🪔</div>
+        <div class="diya">✨</div>
+        <div class="diya">🪔</div>
+    </div>
+
+    <a href="#wishes" class="btn">
+        Celebrate The Magic ✨
+    </a>
+
+</div>
+
+
+<!-- CARDS SECTION -->
+
+<section>
+
+    <h2 class="section-title">
+        Spread The Happiness
+    </h2>
+
+    <p class="section-subtitle">
+        A festival that brings light, love and positivity.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🌟</div>
+
+            <h3>Light & Hope</h3>
+
+            <p>
+                May every light remove darkness and bring
+                new hope, positivity and beautiful beginnings.
+            </p>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💖</div>
+
+            <h3>Love & Happiness</h3>
+
+            <p>
+                May your world sparkle with love, laughter
+                and unforgettable memories.
+            </p>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💎</div>
+
+            <h3>Success & Prosperity</h3>
+
+            <p>
+                May every dream turn into reality and
+                every step bring you closer to success.
+            </p>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎆</div>
+
+            <h3>New Beginnings</h3>
+
+            <p>
+                A new beginning, endless possibilities
+                and a future full of magical moments.
+            </p>
+
+            <div class="line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WISHES SECTION -->
+
+<section id="wishes">
+
+    <div class="wishes">
+
+        <h2>Wishing You A Magical Diwali ❤️</h2>
+
+        <p>
+            Let the lights of Diwali brighten your life.
+
+            May your heart be filled with peace,
+            your home with happiness and your future
+            with unlimited possibilities.
+
+            <br><br>
+
+            Keep Shining, Keep Smiling & Keep Spreading Love!
+        </p>
+
+        <br>
+
+        <button class="btn" onclick="celebrate()">
+            ✨ Click For A Surprise ✨
+        </button>
+
+        <p id="surprise" style="margin-top:25px;color:#ffd700;"></p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    Made with <span>❤️</span> and ✨ | Happy Diwali 2026
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Background Sparkles
+
+for(let i = 0; i < 70; i++) {
+
+    let sparkle = document.createElement("div");
+
+    sparkle.className = "sparkle";
+
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+
+    sparkle.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    sparkle.style.animationDuration =
+        (2 + Math.random() * 3) + "s";
+
+    document.body.appendChild(sparkle);
+}
+
+
+// Surprise Button
+
+function celebrate() {
+
+    document.getElementById("surprise").innerHTML =
+        "🎆 May all your dreams come true! ✨<br>Happy Diwali! 🪔💖";
+
+    for(let i = 0; i < 35; i++) {
+
+        let star = document.createElement("div");
+
+        star.innerHTML = ["✨","💖","🌟","🎆","⭐"][
+            Math.floor(Math.random() * 5)
+        ];
+
+        star.style.position = "fixed";
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.top = Math.random() * 100 + "vh";
+        star.style.fontSize = "25px";
+        star.style.pointerEvents = "none";
+        star.style.zIndex = "10";
+
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, 2000);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
